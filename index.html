@@ -131,6 +131,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
+    <div class="more-works-container">
+    <button class="more-works-btn" id="moreWorksBtn" title="View More Works from Our Lab">
+      <i class="fas fa-flask"></i>
+      More Works
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>Our Works On Credit Card Fraud Detection</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <a href="https://doi.org/10.1109/WINCOM65874.2025.11313431" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Credit Card Fraud Detection Model Based on Explainable TabNet-Based Feature Selection</h5>
+            <p>Feature selection approach for credit card fraud detection using explainable TabNet.</p>
+            <span class="work-venue">Conference paper 2025 (WINCOM)</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://doi.org/10.1016/j.eswa.2025.130871" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Credit card fraud detection model based on optimized long short-term memory : 
+           Imbalanced class solution and overfitting reduction</h5>
+            <p>SV2LSM model for credit card fraud detection.</p>
+            <span class="work-venue">Journal article 2026 (Expert Systems with Applications)</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <!-- <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Paper Title 3</h5>
+            <p>Brief description of the work and its main contribution.</p>
+            <span class="work-venue">Conference/Journal 2023</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a> -->
+      </div>
+    </div>
+  </div>
     <div id="cspio-page">
         <div id="cspio-content">
             
