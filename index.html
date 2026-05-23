@@ -9,11 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> 
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
     <style type="text/css">
     html {
         height: 100%;
@@ -24,18 +25,16 @@
         height: 100%;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
-        /* Matches your main site's body font */
         font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
         font-weight: 300;
-        /* Removed the Unsplash image, added a clean, solid fallback color */
         background-color: #f5f7fa; 
     }
 
-    /* Replaced dark overlay with a soft, clean gradient matching your Oceanic theme */
     #cspio-page {
         background: linear-gradient(135deg, #f5f7fa 0%, #e0f2fe 100%);
         min-height: 100vh;
         display: flex;
+        flex-direction: column; /* Allows footer to sit nicely below content */
         align-items: center;
         justify-content: center;
     }
@@ -45,9 +44,8 @@
         max-width: 600px;
         padding: 40px;
         text-align: center;
-        background: #ffffff; /* Crisp white box */
+        background: #ffffff; 
         border-radius: 8px;
-        /* Soft blue-tinted shadow to match your theme */
         box-shadow: 0 10px 40px rgba(0, 119, 182, 0.15); 
         border: 1px solid #e2e8f0;
     }
@@ -62,7 +60,7 @@
     #cspio-headline {
         font-size: 42px;
         margin-bottom: 10px;
-        color: #0077b6; /* Oceanic Blue */
+        color: #0077b6; 
         font-weight: 600;
     }
 
@@ -73,7 +71,6 @@
         line-height: 1.6;
     }
 
-    /* Form Styles */
     .form-control {
         background-color: #f8f9fa;
         border: 1px solid #cbd5e0;
@@ -88,7 +85,6 @@
         box-shadow: 0 0 8px rgba(0, 119, 182, 0.2);
     }
 
-    /* Button matching your Oceanic Blue */
     .btn-primary {
         background-color: #0077b6;
         border-color: #0077b6;
@@ -100,7 +96,7 @@
     }
 
     .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-        background-color: #023e8a !important; /* Deep Navy hover */
+        background-color: #023e8a !important; 
         border-color: #023e8a !important;
         color: #fff !important;
         outline: none !important;
@@ -131,48 +127,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
-    <div class="more-works-container">
-    <button class="more-works-btn" id="moreWorksBtn" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>Our Works On Credit Card Fraud Detection</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <a href="https://doi.org/10.1109/WINCOM65874.2025.11313431" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Credit Card Fraud Detection Model Based on Explainable TabNet-Based Feature Selection</h5>
-            <p>Feature selection approach for credit card fraud detection using explainable TabNet.</p>
-            <span class="work-venue">Conference paper 2025 (WINCOM)</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://doi.org/10.1016/j.eswa.2025.130871" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Credit card fraud detection model based on optimized long short-term memory : 
-           Imbalanced class solution and overfitting reduction</h5>
-            <p>SV2LSM model for credit card fraud detection.</p>
-            <span class="work-venue">Journal article 2026 (Expert Systems with Applications)</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a> -->
-      </div>
-    </div>
-  </div>
+
     <div id="cspio-page">
         <div id="cspio-content">
             
@@ -204,23 +159,56 @@
             </div>
                                                                                                                                                                                         
         </div>
+
+        <footer style="text-align: center; padding: 20px; color: #718096; font-size: 14px; margin-top: 40px;">
+            &copy; <span id="current-year"></span> &#x2102;red&#x1D538;t&#x1D539;ench by K. El Hachimi, G. Orhanou, and L. Ballihi. All rights reserved except for academic and non-commercial research purposes. Reuse is authorized provided that the original work is properly cited.
+        </footer>
     </div>
-    <footer style="text-align: center; padding: 20px; color: #718096; font-size: 14px; margin-top: 40px;">
-    &copy; <span id="current-year"></span> &#x2102;red&#x1D538;t&#x1D539;ench by K. El Hachimi, G. Orhanou, and L. Ballihi. All rights reserved except for academic and non-commercial research purposes. Reuse is authorized provided that the original work is properly cited.
-      </div>
-    </footer>
+
+    <div class="more-works-container">
+        <button class="more-works-btn" id="moreWorksBtn" title="View More Works from Our Lab">
+          <i class="fas fa-flask"></i>
+          More Works
+          <i class="fas fa-chevron-down dropdown-arrow"></i>
+        </button>
+        <div class="more-works-dropdown" id="moreWorksDropdown">
+          <div class="dropdown-header">
+            <h4>Our Works On Credit Card Fraud Detection</h4>
+            <button class="close-btn" id="closeWorksBtn">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="works-list">
+            <a href="https://doi.org/10.1109/WINCOM65874.2025.11313431" class="work-item" target="_blank">
+              <div class="work-info">
+                <h5>Credit Card Fraud Detection Model Based on Explainable TabNet-Based Feature Selection</h5>
+                <p>Feature selection approach for credit card fraud detection using explainable TabNet.</p>
+                <span class="work-venue">Conference paper 2025 (WINCOM)</span>
+              </div>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://doi.org/10.1016/j.eswa.2025.130871" class="work-item" target="_blank">
+              <div class="work-info">
+                <h5>Credit card fraud detection model based on optimized long short-term memory : Imbalanced class solution and overfitting reduction</h5>
+                <p>SV2LSM model for credit card fraud detection.</p>
+                <span class="work-venue">Journal article 2026 (Expert Systems with Applications)</span>
+              </div>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+    </div>
 
     <script>
-        // Automatically set the current year in the footer
+        // 1. Auto-update Footer Year
         document.getElementById("current-year").textContent = new Date().getFullYear();
-    </script>
-    <script>
-        // Smoothly fade in the content box on load
+
+        // 2. Smoothly fade in the main content box on load
         setTimeout(function(){ 
             jQuery("#cspio-content").show().addClass('animated fadeIn'); 
         }, 250);
 
-        // Resize function for mobile displays
+        // 3. Responsive Resize function for mobile displays
         function resize(){
             $('head').append("<style id='form-style' type='text/css'></style>");
             $('#form-style').html('.cspio .input-group-btn, .cspio .input-group{display:block;width:100%;}.cspio #cspio-subscribe-btn{margin-left:0;width:100%;display:block;border-radius:4px;margin-top:10px;}.cspio .input-group .form-control:first-child {border-radius: 4px;}');
@@ -235,7 +223,6 @@
             }
         );
         
-        // Listen for window resize to fix mobile layout
         $(window).resize(function() {
             var width = $('#cspio-field-wrapper').width();
             if(width < 480 && width != 0){
@@ -243,6 +230,37 @@
             } else {
                 $('#form-style').remove();
             }
+        });
+
+        // 4. "More Works" Widget Logic
+        document.addEventListener("DOMContentLoaded", function() {
+            const btn = document.getElementById("moreWorksBtn");
+            const closeBtn = document.getElementById("closeWorksBtn");
+            const dropdown = document.getElementById("moreWorksDropdown");
+            const container = document.querySelector('.more-works-container');
+            
+            if (!btn || !dropdown || !container) return;
+
+            // Toggle when clicking the main button
+            btn.addEventListener("click", function(e) {
+                e.preventDefault(); 
+                dropdown.classList.toggle("show-works");
+            });
+
+            // Close when clicking the 'X' button inside the header
+            if(closeBtn) {
+                closeBtn.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    dropdown.classList.remove("show-works");
+                });
+            }
+
+            // Close when clicking anywhere outside the widget
+            document.addEventListener("click", function(e) {
+                if (!container.contains(e.target) && dropdown.classList.contains("show-works")) {
+                    dropdown.classList.remove("show-works"); 
+                }
+            });
         });
     </script>
 </body>
